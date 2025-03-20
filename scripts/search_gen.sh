@@ -1,0 +1,33 @@
+
+python search_gen_by_sn.py \
+--gpu_ids 5 \
+--num_workers 8 \
+--gen_bs 128 \
+--dis_bs 64 \
+--eval_batch_size 200 \
+--dataset cifar10 \
+--bottom_width 4 \
+--img_size 32 \
+--max_epoch_G 120 \
+--n_critic 5 \
+--arch arch_cifar10 \
+--draw_arch False \
+--latent_dim 120 \
+--gf_dim 256 \
+--df_dim 128 \
+--g_lr 0.0001 \
+--d_lr 0.0001 \
+--beta1 0.0 \
+--beta2 0.9 \
+--init_type xavier_uniform \
+--val_freq 5 \
+--num_eval_imgs 5000 \
+--exp_name arch_searchG_cifar10_12 \
+--data_path ~/datasets/cifar10 \
+--Total_evolutionary_algebra 30 \
+--num_individual 20 \
+--num_op_g 1 \
+--model_name supernet_gen_12.pt \
+--mute_max_num 5 \
+--num_selected 12 \
+--max_model_size 12
